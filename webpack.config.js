@@ -9,7 +9,7 @@ module.exports = {
         extensions: ['.js','.jsx', '.json', '.wasm'],
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'build'),
         filename: "[name].[contenthash].js"
     },
     module: {
@@ -44,12 +44,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./public/index.html"
         }),
         new FileManagerPlugin({
             events: {
                 onStart: {
-                    delete: ['dist'],
+                    delete: ['build'],
                 },
             },
         }),

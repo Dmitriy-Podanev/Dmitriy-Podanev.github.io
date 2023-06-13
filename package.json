@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.jsx",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --open",
     "build": "webpack --mode production"
   },
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Dmitriy-PDmitriy-Podanev.github.io\nodanev/Dmitriy-Podanev.github.io/issues"
   },
-  "homepage": "https://github.com/Dmitriy-Podanev/Dmitriy-Podanev.github.io#readme",
+  "homepage": "https://github.com/Dmitriy-Podanev/Dmitriy-Podanev.github.io",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
@@ -24,6 +26,7 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
     "filemanager-webpack-plugin": "^8.0.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "sass": "^1.63.3",
     "sass-loader": "^13.3.2",
