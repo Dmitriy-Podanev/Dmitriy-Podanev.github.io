@@ -4,9 +4,9 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: ["@babel/polyfill", "./src/index.jsx"],
+    entry: ["./src/index.tsx"],
     resolve: {
-        extensions: ['.js','.jsx', '.json', '.wasm'],
+        extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -14,16 +14,31 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.jsx?$/, // обновляем регулярное выражение для поддержки jsx
+            /*{
+                test: /\.(js|mjs|jsx|ts|tsx)$/, // обновляем регулярное выражение для поддержки jsx
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         cacheDirectory: true,
-                        presets: ["@babel/preset-react", "@babel/preset-env"]
+                        presets: ["@babel/preset-typescript"]
                     },
                 },
+            },*/
+
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.(svg|png|gif|jpg)$/,
+                exclude: /fonts/,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.(ttf|eot|woff|svg|woff2)$/,
+                loader: "file-loader"
             },
             {
                 test: /\.s[ac]ss$/i,
