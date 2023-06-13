@@ -4,7 +4,7 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: ["@babel/polyfill", "./src/index.jsx"],
+    entry: ["@babel/polyfill", "./index.jsx"],
     resolve: {
         extensions: ['.js','.jsx', '.json', '.wasm'],
     },
@@ -44,7 +44,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./index.html"
         }),
         new FileManagerPlugin({
             events: {
