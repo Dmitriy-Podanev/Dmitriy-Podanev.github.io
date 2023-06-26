@@ -9,11 +9,9 @@
     "allowSyntheticDefaultImports": true,
     "module": "commonjs",
     //Controls how JSX constructs are emitted in JavaScript files.
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": [
     "src",
-    //convert just images to modules
-    "./src/declaration.d.ts"
   ]
 }

@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
     "@types/react-dom": "^18.2.5",
+    "@types/three": "^0.152.1",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",
     "filemanager-webpack-plugin": "^8.0.0",
@@ -39,12 +40,21 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.6",
     "axios": "^1.4.0",
+    "bem-cn": "^3.0.1",
+    "lightweight-charts": "^4.0.1",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
     "redux": "^4.2.1",
-    "redux-saga": "^1.2.3"
+    "redux-saga": "^1.2.3",
+    "three": "^0.153.0"
   }
 }

@@ -1,0 +1,44 @@
+.creature{
+  width: 200px;
+  height: 200px;
+  background: #3ac;
+  position: relative;
+  border-radius: 50%;
+  animation: smile 3s ease-in-out infinite;
+}
+.creature::before, .creature::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  top: 40px;
+  animation: eye 3s ease-in-out infinite;
+}
+
+.creature:hover{
+  animation-play-state: paused;
+  background: #f44250;
+}
+.creature::before { left: 55px; }
+.creature::after { right: 55px; }
+@keyframes eye {
+  90% {transform: none;}
+  95% {transform: scaleY(0.1)}
+}
+
+@keyframes smile {
+  0% {
+    transform: translateX(350px)
+    rotate(360deg);
+    border-radius: 20%;
+  }
+  50% {transform: translateX(0px);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(350px);
+    border-radius: 20%;
+    }
+}

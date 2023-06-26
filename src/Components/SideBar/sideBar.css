@@ -1,0 +1,12 @@
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    justify-content: left;
+    text-align: left;
+    min-height: 100%;
+}
+.menuBtn{
+    margin-top: 15px;
+    cursor: pointer;
+}
